@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>Product Page</h2>
     <img
       alt="Vue logo"
       src="@/assets/logo.png"

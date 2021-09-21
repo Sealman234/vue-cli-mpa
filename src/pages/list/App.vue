@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <h2 class="test-class">
+      List Page
+    </h2>
     <img
       alt="Vue logo"
       src="@/assets/logo.png"
