@@ -5,7 +5,8 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
 
-import '@/assets/scss/list/all.scss';
+import '@/assets/scss/helpers/reset.css';
+import '@/assets/scss/payment-list.scss';
 
 Vue.use(ElementUI);
 Vue.use(VueAxios, axios);
