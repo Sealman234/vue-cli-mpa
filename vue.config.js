@@ -15,12 +15,12 @@ module.exports = {
       title: 'List Page',
       chunks: ['chunk-vendors', 'chunk-common', 'list'],
     },
-    product: {
-      entry: 'src/pages/product/main.js',
+    success: {
+      entry: 'src/pages/success/main.js',
       template: 'public/index.html',
-      filename: 'product.html',
-      title: 'Product Page',
-      chunks: ['chunk-vendors', 'chunk-common', 'product'],
+      filename: 'success.html',
+      title: 'Success Page',
+      chunks: ['chunk-vendors', 'chunk-common', 'success'],
     },
   },
 };

@@ -1,0 +1,117 @@
+.el-main {
+  .el-main__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .el-main__orderNumber {
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+    margin-bottom: 10px;
+
+    > span {
+      color: #666;
+    }
+  }
+}
+
+// ATM 繳費資訊 & 發票資訊
+.atm-info-title {
+  font-size: 13px;
+  line-height: 18px;
+  color: #333;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+.flexTable {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  margin-bottom: 10px;
+
+  .flexTable__row {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #e0e0e0;
+    &.no-border-bottom {
+      border-bottom: none;
+    }
+
+    .flexTable__name {
+      margin-left: 15px;
+      margin-right: 10px;
+      white-space: nowrap;
+      &.flexTable__name--atm {
+        width: 78px;
+      }
+      &.flexTable__name--inv {
+        width: 52px;
+      }
+    }
+
+    .flexTable__content {
+      &.text-danger {
+        font-weight: 500;
+        color: #eb5757;
+      }
+      &.text-price {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    }
+
+    &.flexTable__row--account {
+      height: 71px;
+
+      .account-text {
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .account-remind {
+        color: #666;
+      }
+
+      .account-copy {
+        background: #ffffff;
+        border: 1px solid #d8d8d8;
+        border-radius: 2px;
+        padding: 5px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+          background: #fff;
+          border-color: #409eff;
+          color: #409eff;
+        }
+
+        &:active {
+          background: #fff;
+          border-color: #3a8ee6;
+          color: #3a8ee6;
+          outline: none;
+        }
+
+        i.fr-clone {
+          margin-right: 5px;
+          color: #666;
+        }
+
+        span {
+          font-size: 12px;
+          line-height: 17px;
+          color: #666;
+        }
+      }
+    }
+  }
+}
