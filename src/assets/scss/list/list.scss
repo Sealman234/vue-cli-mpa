@@ -1,0 +1,51 @@
+.el-main {
+  .el-main__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  &.el-main--empty {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.emptyList {
+  background: #f7f7f7;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  width: 285px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .emptyList__icon {
+    color: #999;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .emptyList__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 5px;
+  }
+
+  .emptyList__tel {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #999;
+  }
+}

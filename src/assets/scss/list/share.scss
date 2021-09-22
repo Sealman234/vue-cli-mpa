@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 18px;
+  color: #333;
+}
+
+/* 外層容器 */
+.el-container {
+  max-width: 768px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/* Web Header */
+.el-header--web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 18%);
+  background: #fff;
+
+  .el-header__logo {
+    display: inline-block;
+    padding: 10px;
+
+    > h1 {
+      width: 100px;
+      height: 30px;
+      background-image: url('../../logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-indent: 101%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+/* App Header */
+.el-header--app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 56px;
+  border-bottom: 0;
+  box-shadow: none;
+  background-color: #ff8a00;
+
+  .el-header__back {
+    font-size: 3.2rem;
+    line-height: 32px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .el-header__back--hidden {
+    font-size: 32px;
+    line-height: 32px;
+    opacity: 0;
+  }
+
+  .el-header__title {
+    line-height: 56px;
+    letter-spacing: 0.1em;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.el-main {
+  padding: 15px;
+  background: #f2f2f2;
+}
+
+/* 商品明細 */
+.productDetails {
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  max-width: 100%;
+  padding: 0 10px;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  table {
+    width: 100%;
+  }
+
+  .productDetails__title {
+    padding: 15px 5px;
+    cursor: pointer;
+
+    .productDetails__totalPrice {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 21px;
+      color: #333;
+    }
+
+    .productDetails__icon {
+      margin-left: 10px;
+      transition: transform 0.3s;
+
+      &.is-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .productDetails__table {
+    th,
+    td {
+      font-size: 13px;
+      line-height: 18px;
+      color: #333;
+    }
+
+    td {
+      padding: 5px;
+      vertical-align: top;
+    }
+
+    .productDetails__colspanTitle {
+      text-align: left;
+      background: #eff8ff;
+      border-radius: 3px;
+      padding: 5px;
+      font-weight: 500;
+
+      &.productDetails__colspanTitle--grey {
+        background: #f2f2f2;
+      }
+
+      > span {
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        color: #f29700;
+      }
+    }
+
+    .productDetails__spacer--sm {
+      height: 5px;
+    }
+
+    .productDetails__spacer--md {
+      height: 10px;
+    }
+
+    .productDetails__spacer--border {
+      min-height: 1px;
+      max-height: 1px;
+      height: 1px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .productDetails__name {
+      text-align: left;
+
+      &.productDetails__name--month {
+        font-weight: 500;
+      }
+    }
+
+    .productDetails__time {
+      color: #999;
+      white-space: nowrap;
+    }
+
+    .productDetails__price {
+      text-align: right;
+    }
+
+    .productDetails__monthInfo {
+      background: #f5f5f5;
+      border-radius: 3px;
+    }
+  }
+
+  .productDetails__payoff {
+    padding: 15px 5px;
+    border-top: 1px solid #e0e0e0;
+
+    .productDetails__payoff--name {
+      font-size: 13px;
+      line-height: 18px;
+      color: #333;
+    }
+    .productDetails__payoff--price {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 21px;
+      color: #eb5757;
+    }
+  }
+}
+
+/* 服務提醒 (payment-details, payment-success) */
+.service-reminder {
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 3px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  ul {
+    padding: 0 0 0 25px;
+
+    li {
+      list-style-type: decimal;
+      font-size: 13px;
+      line-height: 22px;
+      color: #333;
+    }
+  }
+}
+
+/* 客製化深藍色 el-button */
+.button--darkblue {
+  background-color: #3870e0;
+  border-color: #3870e0;
+
+  &:hover,
+  &:focus {
+    background: #608de6;
+    border-color: #608de6;
+    color: #fff;
+  }
+
+  &:active {
+    background: #3265ca;
+    border-color: #3265ca;
+    color: #fff;
+    outline: none;
+  }
+}
+
+/* 修改 el-collapse 預設樣式 */
+.el-collapse {
+  border: none;
+
+  .el-collapse-item__header {
+    display: block;
+    height: auto;
+    line-height: 0;
+    border-bottom: none;
+
+    .el-collapse-item__arrow {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  .el-collapse-item__content {
+    padding-bottom: 0;
+  }
+
+  .el-collapse-item__wrap {
+    border: none;
+  }
+
+  .el-collapse-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* 修改 el-dialog 預設樣式 */
+.custom-rakuya-dialog {
+  .el-dialog__header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .el-dialog__body {
+    padding: 0 15px 15px 15px;
+  }
+
+  .el-dialog__footer {
+    padding: 0 15px 15px 15px;
+  }
+
+  .el-dialog__headerbtn {
+    position: inherit;
+    top: auto;
+    right: auto;
+  }
+
+  .el-icon-close:before {
+    content: '關閉 \e6db';
+  }
+}
+
+/* 修改 el-dialog fullscreen 預設樣式 */
+.rakuya-fullscreen-dialog {
+  .el-dialog__header {
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .el-dialog__body {
+    padding: 0 15px 15px 15px;
+    z-index: 99;
+  }
+
+  .el-dialog__headerbtn {
+    position: inherit;
+    top: auto;
+    right: auto;
+  }
+
+  .el-icon-close:before {
+    content: '關閉 \e6db';
+  }
+}
+.rakuya-fullscreen-dialog.is-webview {
+  .el-dialog__header {
+    padding-top: 25px;
+  }
+}
+
+/* 修改 el-dialog 關閉按鈕顏色 */
+.el-dialog__headerbtn .el-dialog__close {
+  color: #999;
+}
+
+/* 修改 el-message 組件寬度 */
+.el-message {
+  min-width: 280px;
+  max-width: 90%;
+  @media (min-width: 375px) {
+    min-width: 320px;
+  }
+  @media (min-width: 414px) {
+    min-width: 380px;
+  }
+}
